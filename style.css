@@ -1,0 +1,127 @@
+/* -------------------------- GENERAL -------------------------- */
+
+body {
+  color: #333;
+  text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+a:visited {
+  color: #74638f;
+}
+a {
+  color: #002f68da;
+}
+
+/* -------------------------- SECTIONS -------------------------- */
+
+#image {
+  max-width: 100%;
+  display: block;
+  height: auto;
+  margin: auto;
+}
+
+#image-caption {
+  margin: 15px 0 5px 0;
+}
+
+#title h1 {
+  font-size: 2.5rem;
+}
+#title h2 {
+  font-weight: normal;
+  font-style: italic;
+}
+
+#title,
+#tribute-info {
+  background-color: #eee;
+  border: 1px solid grey;
+  padding: 10px;
+}
+
+#tribute-info ul li {
+  text-align: justify;
+  padding-bottom: 10px;
+}
+
+/* -------------------------- ANIMATION -------------------------- */
+#footer {
+  padding: 30px;
+}
+
+aside {
+  margin: auto;
+  width: 250px;
+}
+
+.loading {
+  padding: 3px;
+  background-size: 130%;
+  height: 50px;
+  line-height: 46px;
+  border-radius: 8px;
+  text-align: center;
+  position: relative;
+}
+
+.text,
+.border {
+  z-index: 5;
+  border-radius: 10px;
+  display: block;
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  bottom: 4px;
+  right: 4px;
+  display: block;
+}
+
+.text {
+  top: 7px;
+}
+
+.border {
+  border: 2px dashed #333;
+  clip: rect(0, 0, 0, 0);
+  animation: maskBorder 2s infinite;
+}
+
+@keyframes maskBorder {
+  0% {
+    clip: rect(0, 50px, 10px, 0);
+  }
+
+  20% {
+    clip: rect(0, 250px, 10px, 0);
+  }
+
+  35% {
+    clip: rect(0, 250px, 10px, 190px);
+  }
+
+  50% {
+    clip: rect(10px, 250px, 50px, 190px);
+  }
+
+  60% {
+    clip: rect(40px, 250px, 50px, 190px);
+  }
+
+  70% {
+    clip: rect(40px, 250px, 50px, 0px);
+  }
+
+  85% {
+    clip: rect(40px, 10px, 50px, 0px);
+  }
+
+  90% {
+    clip: rect(0, 10px, 50px, 0px);
+  }
+
+  100% {
+    clip: rect(0, 10px, 10px, 0px);
+  }
+}
